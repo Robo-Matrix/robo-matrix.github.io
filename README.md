@@ -1,6 +1,6 @@
 # RoboMatrix
 
-This is the repository that contains source code for the [RoboMatrix website](https://nerfies.github.io).
+This is the repository that contains source code for the [RoboMatrix website](https://robo-matrix.github.io/).
 
 If you find RoboMatrix useful for your work please cite:
 ```

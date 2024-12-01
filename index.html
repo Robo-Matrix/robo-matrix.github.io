@@ -91,7 +91,7 @@
           <h1 class="title is-1 publication-title">RoboMatrix: A Skill-centric Hierarchical Framework for Scalable Robot Task Planning and Execution in Open-World</h1>
           <div class="is-size-5 publication-authors">
             <div style="display: inline-block; margin-right: 5px;">
-              <a href="https://scholar.google.com/citations?user=6-bYm5EAAAAJ">Weixin Mao</a><sup>1,2</sup><span class="author-star">*</span>
+              <a href="https://scholar.google.com/citations?user=6-bYm5EAAAAJ">Weixin Mao</a><sup>1,3</sup><span class="author-star">*</span>
             </div>
             <div style="display: inline-block; margin-right: 5px;">
               <a href="#">Weiheng Zhong</a><sup>2</sup><span class="author-star">*</span>
@@ -100,7 +100,7 @@
               <a href="#">Zhou Jiang</a><sup>2</sup>
             </div>
             <div style="display: inline-block; margin-right: 5px;">
-              <a href="#">Dong Fang</a><sup>3</sup>
+              <a href="#">Dong Fang</a><sup>4</sup>
             </div>
             <div style="display: inline-block; margin-right: 5px;">
               <a href="#">Zhongyue Zhang</a><sup>2</sup>
@@ -125,13 +125,19 @@
 
           <!-- Author footnote -->
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Waseda University,</span>
-            <span class="author-block"><sup>2</sup>Beijing Institute of Technology,</span>
-            <span class="author-block"><sup>3</sup>Megvii Research</span>
-          </div>
-          <div class="is-size-5 publication-authors">
+            <div>
+                <span class="author-block"><sup>1</sup>Waseda University,</span>
+                <span class="author-block"><sup>2</sup>Beijing Institute of Technology,</span>
+            </div>
+            <div>
+                <span class="author-block"><sup>3</sup>Megvii Technology,</span>
+                <span class="author-block"><sup>4</sup>The Chinese University of Hong Kong</span>
+            </div>
+        </div>
+        <div class="is-size-5 publication-authors">
             <p><strong>*</strong>Equal contribution</p>
-          </div>
+        </div>
+        
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -156,7 +162,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -164,7 +170,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/WayneMao/RoboMatrix/"
@@ -194,50 +200,7 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-widescreen">
-
-    <div class="rows">
-      <h2 class="title is-3">Skill-Centric</h2>
-      
-      <p class="content has-text-justified">
-        <strong>Inspiration of the skill-centric method.</strong>
-    Robots with different modalities can perform different tasks and robots with the same modality can be used in various scenarios. We extract similar elements from the multitude of diverse robotic tasks, defining these elements as meta-skills, and store them in a skill list. Then, these skills are used to train the Vision-Language-Action (VLA) model or to construct traditional models, which can eventually lead to a skill model capable of adapting to new tasks.
-      </p>
-      <br>
-      <div style="text-align: center;">
-        <img src="static/images/meta-skill.png" class="interpolation-image" style="width: 100%; height: auto;"/>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="section">
-  <div class="container is-max-widescreen">
-
-    <div class="rows">
-      <h2 class="title is-3">RoboMatrix</h2>
-      
-      <p class="content has-text-justified">
-        The system accepts the task description in either text or audio format. The text can be entered manually, while the audio is converted into text format by the audio-to-text module.
-    The <strong>Modular Scheduling Layer</strong> serves as the high-level planner of the system. The agent decomposes complex tasks into an ordered sequence of subtasks based on the robot's skill list and adds them sequentially to the execution queue.
-    Before executing a subtask, the execution checker verifies its executability by determining whether the object to be manipulated or grasped is present in the scene based on the robot's environment observations.
-    The <strong>Skill Layer</strong> maps the description of subtasks to robot actions using either hybrid model or VLA model, with the action including a stop signal to determine whether the current subtask is complete.
-    The <strong>Hardware Layer</strong> manages the controller and stage observer of the robot, with the controller converting actions into control signals and the stage observer continuously updating the robot's state and image in real-time.
-      </p>
-      <br>
-      <div style="text-align: center;">
-        <img src="static/images/framework.png" class="interpolation-image" style="width: 100%; height: auto;"/>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
@@ -251,58 +214,58 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
+        <div class="item item-close_drawer">
+          <video poster="" id="close_drawer" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/skills/close_drawer.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
+        <div class="item item-cross">
+          <video poster="" id="cross" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/skills/cross.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
+        <div class="item item-grasp_object">
+          <video poster="" id="grasp_object" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/skills/grasp_object.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
+        <div class="item item-move_to_object">
+          <video poster="" id="move_to_object" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/skills/move_to_object.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
+        <div class="item item-move_to_place">
+          <video poster="" id="move_to_place" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/skills/move_to_place.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
+        <div class="item item-open_drawer">
+          <video poster="" id="open_drawer" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/skills/open_drawer.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
+        <div class="item item-place_object">
+          <video poster="" id="place_object" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/skills/place_object.mp4"
                     type="video/mp4">
           </video>
         </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
+        <div class="item item-release_object">
+          <video poster="" id="release_object" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/skills/release_object.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -347,7 +310,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <!-- <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" -->
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
@@ -357,6 +320,48 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Skill-Centric</h2>
+      
+      <p class="content has-text-justified">
+        <strong>Inspiration of the skill-centric method.</strong>
+    Robots with different modalities can perform different tasks and robots with the same modality can be used in various scenarios. We extract similar elements from the multitude of diverse robotic tasks, defining these elements as meta-skills, and store them in a skill list. Then, these skills are used to train the Vision-Language-Action (VLA) model or to construct traditional models, which can eventually lead to a skill model capable of adapting to new tasks.
+      </p>
+      <br>
+      <div style="text-align: center;">
+        <img src="static/images/meta-skill.png" class="interpolation-image" style="width: 100%; height: auto;"/>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">RoboMatrix</h2>
+      
+      <p class="content has-text-justified">
+        The system accepts the task description in either text or audio format. The text can be entered manually, while the audio is converted into text format by the audio-to-text module.
+    The <strong>Modular Scheduling Layer</strong> serves as the high-level planner of the system. The agent decomposes complex tasks into an ordered sequence of subtasks based on the robot's skill list and adds them sequentially to the execution queue.
+    Before executing a subtask, the execution checker verifies its executability by determining whether the object to be manipulated or grasped is present in the scene based on the robot's environment observations.
+    The <strong>Skill Layer</strong> maps the description of subtasks to robot actions using either hybrid model or VLA model, with the action including a stop signal to determine whether the current subtask is complete.
+    The <strong>Hardware Layer</strong> manages the controller and stage observer of the robot, with the controller converting actions into control signals and the stage observer continuously updating the robot's state and image in real-time.
+      </p>
+      <br>
+      <div style="text-align: center;">
+        <img src="static/images/framework.png" class="interpolation-image" style="width: 100%; height: auto;"/>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -400,7 +405,7 @@
     <!--/ Matting. -->
 
     <!-- Animation. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
 
@@ -456,7 +461,7 @@
             <source src=""
                     type="video/mp4">
           </video>
-        </div>
+        </div> -->
         <!--/ Re-rendering. -->
 
       </div>
