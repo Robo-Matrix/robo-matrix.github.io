@@ -287,7 +287,7 @@
             necessitating the collection of task data in an end-to-end manner. Consequently, 
             The learned policy tends to fail in tackling novel tasks. Moreover, 
             it is hard to localize the errors for a complex task with multiple stages due to end-to-end learning.
-            To address these challenges, we propose \textbf{RoboMatrix}, a skill-centric and hierarchical framework 
+            To address these challenges, we propose <b>RoboMatrix</b>, a skill-centric and hierarchical framework 
             for scalable task planning and execution. We first introduce a novel skill-centric paradigm thatextracts 
             the common meta-skills from different complex tasks. This allows for the capture of embodied 
             demonstrations through a kill-centric approach, enabling the completion of open-world tasks 
@@ -306,16 +306,27 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <video controls autoplay muted loop playsinline width="100%">
+            <source src="./static/videos/skills/place_object.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div> -->
+    
     <!--/ Paper video. -->
   </div>
 </section>
@@ -366,10 +377,10 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered"> -->
 
       <!-- Visual Effects. -->
-      <div class="column">
+      <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
           <p>
@@ -381,11 +392,11 @@
                     type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -401,7 +412,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Matting. -->
 
     <!-- Animation. -->
@@ -410,7 +421,7 @@
         <h2 class="title is-3">Animation</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -440,15 +451,16 @@
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
+        <br/> -->
         <!--/ Interpolating. -->
 
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- New Scene1. -->
+        <h3 class="title is-4">Scene Generalization</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            <!-- Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+            viewpoint such as a stabilized camera by playing back the training deformations. -->
+            Vision-Language-Action model generalization to novel and challenging scenarios.
           </p>
         </div>
         <div class="content has-text-centered">
@@ -458,11 +470,31 @@
                  preload
                  playsinline
                  width="75%">
-            <source src=""
+            <source src="./static/videos/demo_new_scene.mp4"
                     type="video/mp4">
           </video>
-        </div> -->
-        <!--/ Re-rendering. -->
+        </div>
+        <!--/ Audio-pepeline. -->
+
+        <!-- Audio-pepeline. -->
+        <h3 class="title is-4">Audio Input Pipeline</h3>
+        <div class="content has-text-justified">
+          <p>
+            Voice input task description and complete pipeline demonstration of the RoboMatrix framework.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/audio_pipeline.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ Audio-pepeline. -->
 
       </div>
     </div>
