@@ -375,6 +375,51 @@
 </section>
 
 <section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Generalization</h2>
+      
+      <p class="content has-text-justified">
+        Vision-Language-Action model generalization to novel and challenging scenarios.
+      </p>
+      
+      <div class="columns">
+        <div class="column has-text-centered">
+          <video id="dist1"
+            controls
+            muted
+            autoplay
+            loop
+            width="99%">
+            <source src="./static/videos/move_pick_place_new_scene.mp4" 
+            type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            "Place the pink cube into black toolbox."
+          </p>
+        </div>
+    
+        <div class="column has-text-centered">
+          <video id="dist2"
+            controls
+            muted
+            autoplay
+            loop
+            width="99%">
+            <source src="./static/videos/crossing_obstacles.mp4" 
+            type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            "Crossing the obstacles at the front."
+          </p>
+        </div>
+  </div>
+  </div>
+</section>
+
+
+<section class="section">
   <div class="container is-max-desktop">
 
     <!-- <div class="columns is-centered"> -->
@@ -455,11 +500,9 @@
         <!--/ Interpolating. -->
 
         <!-- New Scene1. -->
-        <h3 class="title is-4">Scene Generalization</h3>
+        <!-- <h3 class="title is-4">Scene Generalization</h3>
         <div class="content has-text-justified">
           <p>
-            <!-- Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations. -->
             Vision-Language-Action model generalization to novel and challenging scenarios.
           </p>
         </div>
@@ -485,7 +528,7 @@
             <source src="./static/videos/crossing_obstacles.mp4"
                     type="video/mp4">
           </video>
-        </div>
+        </div> -->
         <!--/ New Scene1. -->
 
         <!-- Audio-pepeline. -->
@@ -507,7 +550,28 @@
                     type="video/mp4">
           </video>
         </div>
-        <!--/ Audio-pepeline. -->
+        <!--/ 15 steps. -->
+
+        <!-- Audio-pepeline. -->
+        <h3 class="title is-4">Super Long-horizon Tasks</h3>
+        <div class="content has-text-justified">
+          <p>
+            RoboMatrix takes a composite task prompt as input, decomposes it into a skill list with <b>15 sequential steps</b>, 
+            and leverages the VLA skill model to successfully execute the super long-Horizon tasks.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/clean_floor.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!--/ 15 steps. -->
 
         <!-- Audio-pepeline. -->
         <!-- <h3 class="title is-4">Audio Input Pipeline</h3>
@@ -568,12 +632,6 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <!-- <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre> -->
     <pre><code>@misc{mao2024robomatrixskillcentrichierarchicalframework,
       title={RoboMatrix: A Skill-centric Hierarchical Framework for Scalable Robot Task Planning and Execution in Open-World}, 
       author={Weixin Mao and Weiheng Zhong and Zhou Jiang and Dong Fang and Zhongyue Zhang and Zihan Lan and Fan Jia and Tiancai Wang and Haoqiang Fan and Osamu Yoshie},
